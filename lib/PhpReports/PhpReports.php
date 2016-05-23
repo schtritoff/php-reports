@@ -70,7 +70,8 @@ class PhpReports {
 		FileSystemCache::$cacheDir = self::$config['cacheDir'];
 
 		if(!isset($_SESSION['environment']) || !isset(self::$config['environments'][$_SESSION['environment']])) {
-			$_SESSION['environment'] = array_shift(array_keys(self::$config['environments']));
+			$environments = array_keys(self::$config['environments']);
+			$_SESSION['environment'] = array_shift($environments);
 		}
 
 		// Extend twig.
@@ -82,7 +83,7 @@ class PhpReports {
 
 	public static function setVar($key,$value) {
 		if(!self::$vars) self::$vars = array();
-
+		
 		self::$vars[$key] = $value;
 	}
 	public static function getVar($key, $default=null) {
@@ -215,21 +216,22 @@ class PhpReports {
 
 		try {
 			$report = ReportFormatBase::prepareReport($report);
-
+			$explodereport = explode('.',$report->report);
 			$template_vars = array(
 				'report'=>$report->report,
 				'options'=>$report->options,
 				'contents'=>$report->getRaw(),
-				'extension'=>array_pop(explode('.',$report->report))
+				'extension'=>array_pop($explodereport)
 			);
 		}
 		//if there is an error parsing the report
 		catch(Exception $e) {
+			$explodereport = explode('.',$report->report);
 			$template_vars = array(
 				'report'=>$report,
 				'contents'=>Report::getReportFileContents($report),
 				'options'=>array(),
-				'extension'=>array_pop(explode('.',$report)),
+				'extension'=>array_pop($explodereport),
 				'error'=>$e
 			);
 		}
@@ -437,7 +439,8 @@ class PhpReports {
 			else {
 				//files to skip
 				if(strpos(basename($report),'.') === false) continue;
-				$ext = array_pop(explode('.',$report));
+				$explodereport = explode('.',$report);
+				$ext = array_pop($explodereport);
 				if(!isset(self::$config['default_file_extension_mapping'][$ext])) continue;
 
 				$name = substr($report,strlen($base));
@@ -648,11 +651,11 @@ class PhpReports {
 	 */
 	public static function json_decode($json, $assoc=false) {
 		//replace single quoted values
-		$json = preg_replace('/:\s*\'(([^\']|\\\\\')*)\'\s*([},])/e', "':'.json_encode(stripslashes('$1')).'$3'", $json);
-
+		$json = preg_replace_callback('/:\s*\'(([^\']|\\\\\')*)\'\s*([},])/', create_function('$matches', 'return "\':\'.json_encode(stripslashes(\'$matches[1]\')).\'$matches[3]\'";'), $json);
+		
 		//replace single quoted keys
-		$json = preg_replace('/\'(([^\']|\\\\\')*)\'\s*:/e', "json_encode(stripslashes('$1')).':'", $json);
-
+		$json = preg_replace_callback('/\'(([^\']|\\\\\')*)\'\s*:/', create_function('$matches', 'return "json_encode(stripslashes(\'$matches[1]\')).\':\'";'), $json);
+		
 		//remove any line breaks in the code
 		$json = str_replace(array("\n","\r"),"",$json);
 
