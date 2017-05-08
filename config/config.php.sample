@@ -107,6 +107,13 @@ return array(
 				'user'=>'readonly',
 				'pass'=>'password',
 			),
+      
+      // Oracle via PDO
+			'oci8'=>array(
+				'dsn'=>'oci:dbname=//localhost/ORCL;charset=AL32UTF8',
+				'user'=>'readonly',
+				'pass'=>'password',
+			),
 
 			// Supports MongoDB
 			'mongo'=>array(

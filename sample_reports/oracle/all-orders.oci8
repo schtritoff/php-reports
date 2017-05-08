@@ -1,0 +1,21 @@
+﻿-- All Orders
+-- This report lets you view all orders within a specified time period.
+-- You can click on a customer name to drill down into all orders for that customer.
+--  VARIABLE: { 
+--    name: "schema", 
+--    display: "Oracle schema", 
+--    type: "select", 
+--    options: [{ value: "S1", display: "S1"},{ value: "S2", display: "S2"}]
+--  }
+
+
+SELECT
+    order_id as 'Order Id',
+    created_at as 'Order Date',
+    customer_fname || ' ' || customer_lname as 'Customer Name',
+    customer_id as 'Customer Id',
+    grand_total as 'Grand Total',
+    status as 'Order Status'
+FROM
+    {{ schema }}.orders
+
