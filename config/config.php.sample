@@ -108,11 +108,16 @@ return array(
 				'pass'=>'password',
 			),
       
-      // Oracle via PDO
+      		// Oracle via PDO
 			'oci8'=>array(
 				'dsn'=>'oci:dbname=//localhost/ORCL;charset=AL32UTF8',
 				'user'=>'readonly',
 				'pass'=>'password',
+				//'nls_options' => array(
+				//	'NLS_DATE_FORMAT' => 'YYYY-MM-DD HH24:MI:SS',
+				//	'NLS_TIMESTAMP_FORMAT' => 'YYYY-MM-DD HH24:MI:SSXFF',
+				////'NLS_LANGUAGE' => 'American',
+				//),
 			),
 
 			// Supports MongoDB
