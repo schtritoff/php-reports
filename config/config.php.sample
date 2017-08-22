@@ -115,6 +115,7 @@ return array(
 				'pass'=>'password',
 				//'nls_options' => array(
 				//	'NLS_DATE_FORMAT' => 'YYYY-MM-DD HH24:MI:SS',
+				//	'NLS_NUMERIC_CHARACTERS' => '.,',
 				//	'NLS_TIMESTAMP_FORMAT' => 'YYYY-MM-DD HH24:MI:SSXFF',
 				////'NLS_LANGUAGE' => 'American',
 				//),

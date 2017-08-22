@@ -6,3 +6,4 @@ classes/local/*.php
 templates/local
 vendor/
 composer.phar
+.vscode
