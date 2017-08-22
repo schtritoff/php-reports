@@ -384,6 +384,10 @@ class PhpReports {
 			$data = FileSystemCache::retrieve($cacheKey, filemtime($loc));
 		}
 
+		if (version_compare(phpversion(), '7.1', '>=')) {
+			$data = false; // TODO - PHP 7.1 cache is not working!
+		}
+
 		//report data not cached, need to parse it
 		if($data === false) {
 			$temp = new Report($report);
