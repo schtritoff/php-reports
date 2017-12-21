@@ -150,7 +150,7 @@
                 "cache",
                 "file system"
             ],
-            "time": "2013-07-05 13:28:27"
+            "time": "2013-07-05T13:28:27+00:00"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -203,7 +203,7 @@
                 "highlight",
                 "sql"
             ],
-            "time": "2015-08-30 16:36:01"
+            "time": "2015-08-30T16:36:01+00:00"
         },
         {
             "name": "lespoilus/spyc",
@@ -246,20 +246,20 @@
                 "yml",
                 "zf2"
             ],
-            "time": "2012-10-15 11:52:47"
+            "time": "2012-10-15T11:52:47+00:00"
         },
         {
             "name": "mikecao/flight",
-            "version": "v1.3.3",
+            "version": "v1.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mikecao/flight.git",
-                "reference": "1c8d06cc42dcb04355984d561ce9fbbcf0bb9ef7"
+                "reference": "e146b8c0ddbc6384c5a66f23dea71743fc282289"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mikecao/flight/zipball/1c8d06cc42dcb04355984d561ce9fbbcf0bb9ef7",
-                "reference": "1c8d06cc42dcb04355984d561ce9fbbcf0bb9ef7",
+                "url": "https://api.github.com/repos/mikecao/flight/zipball/e146b8c0ddbc6384c5a66f23dea71743fc282289",
+                "reference": "e146b8c0ddbc6384c5a66f23dea71743fc282289",
                 "shasum": ""
             },
             "require": {
@@ -289,7 +289,7 @@
             ],
             "description": "Flight is a fast, simple, extensible framework for PHP. Flight enables you to quickly and easily build RESTful web applications.",
             "homepage": "http://flightphp.com",
-            "time": "2017-07-19T18:44:21+00:00"
+            "time": "2017-10-20T01:46:56+00:00"
         },
         {
             "name": "phpoffice/phpexcel",
@@ -351,7 +351,7 @@
                 "xls",
                 "xlsx"
             ],
-            "time": "2017-03-02 00:38:00"
+            "time": "2017-03-02T00:38:00+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -359,12 +359,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "e8a71970b33410591f664f72dba6bd755fa7bf55"
+                "reference": "c1265670eec0664247d149072593ae309e8bf73e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/e8a71970b33410591f664f72dba6bd755fa7bf55",
-                "reference": "e8a71970b33410591f664f72dba6bd755fa7bf55",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/c1265670eec0664247d149072593ae309e8bf73e",
+                "reference": "c1265670eec0664247d149072593ae309e8bf73e",
                 "shasum": ""
             },
             "require": {
@@ -399,13 +399,13 @@
                 }
             ],
             "description": "Swiftmailer, free feature-rich PHP mailer",
-            "homepage": "http://swiftmailer.org",
+            "homepage": "https://swiftmailer.symfony.com",
             "keywords": [
                 "email",
                 "mail",
                 "mailer"
             ],
-            "time": "2017-08-10 12:25:50"
+            "time": "2017-11-23T14:49:16+00:00"
         },
         {
             "name": "twig/twig",
@@ -413,12 +413,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "cd06d3c69619dcf5bfdbfe5d1f18923389a5bd43"
+                "reference": "b36e3eb45221b36e0bf8050c18231ee4209ee225"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/cd06d3c69619dcf5bfdbfe5d1f18923389a5bd43",
-                "reference": "cd06d3c69619dcf5bfdbfe5d1f18923389a5bd43",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/b36e3eb45221b36e0bf8050c18231ee4209ee225",
+                "reference": "b36e3eb45221b36e0bf8050c18231ee4209ee225",
                 "shasum": ""
             },
             "require": {
@@ -470,24 +470,24 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-08-19 17:37:14"
+            "time": "2017-12-07T15:56:46+00:00"
         },
         {
             "name": "yajra/laravel-pdo-via-oci8",
-            "version": "v1.3.1",
+            "version": "v1.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yajra/pdo-via-oci8.git",
-                "reference": "b3e52482af67770a0b3ea620f11ba0a1b38b4afd"
+                "reference": "27374cc5ba4d11c0dda08621a9039f107f00fe36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/pdo-via-oci8/zipball/b3e52482af67770a0b3ea620f11ba0a1b38b4afd",
-                "reference": "b3e52482af67770a0b3ea620f11ba0a1b38b4afd",
+                "url": "https://api.github.com/repos/yajra/pdo-via-oci8/zipball/27374cc5ba4d11c0dda08621a9039f107f00fe36",
+                "reference": "27374cc5ba4d11c0dda08621a9039f107f00fe36",
                 "shasum": ""
             },
             "require-dev": {
-                "phpunit/phpunit": "4.0.*"
+                "phpunit/phpunit": "^6.4"
             },
             "type": "library",
             "autoload": {
@@ -506,7 +506,7 @@
                 }
             ],
             "description": "PDO userspace driver proxying calls to PHP OCI8 driver",
-            "time": "2017-02-02T02:51:53+00:00"
+            "time": "2017-11-28T05:06:03+00:00"
         }
     ],
     "packages-dev": [],
