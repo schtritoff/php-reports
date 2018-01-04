@@ -106,7 +106,19 @@ class PdoReportType extends ReportTypeBase {
 		$displayColumn = $params['column'];
 		if(isset($params['display'])) $displayColumn = $params['display'];
 
-		$query = 'SELECT DISTINCT `'.$params['column'].'` as val, `'.$displayColumn.'` as disp FROM '.$params['table'];
+		// SQL identifier delimiters, src: http://www.sqlite.org/lang_keywords.html
+		$identifierDelimiterLeft = '';
+		$identifierDelimiterRight = '';
+		$pdo_driver = $report->conn->getAttribute(PDO::ATTR_DRIVER_NAME);
+		if ($pdo_driver == 'sqlsrv') {
+			$identifierDelimiterLeft = '[';
+			$identifierDelimiterRight = ']';
+		}
+		if ($pdo_driver == 'mysql') {
+			$identifierDelimiterLeft = '`';
+			$identifierDelimiterRight = '`';
+		}
+		$query = 'SELECT DISTINCT '.$identifierDelimiterLeft.$params['column'].$identifierDelimiterRight.' as val, '.$identifierDelimiterLeft.$displayColumn.$identifierDelimiterRight.' as disp FROM '.$params['table'];
 
 		if(isset($params['where'])) {
 			$query .= ' WHERE '.$params['where'];
