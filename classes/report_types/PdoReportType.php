@@ -136,8 +136,8 @@ class PdoReportType extends ReportTypeBase {
 
 		while($row = $result->fetch(PDO::FETCH_ASSOC)) {
 			$options[] = array(
-				'value'=>$row['val'],
-				'display'=>$row['disp']
+				'value' => array_change_key_case($row)['val'],
+				'display' =>  array_change_key_case($row)['disp']
 			);
 		}
 
