@@ -4,107 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a560b5599f69a048b4328803192a5d4a",
+    "content-hash": "ec6004f91afba88e2454b83767acb6ad",
     "packages": [
-        {
-            "name": "adodb/adodb-php",
-            "version": "v5.20.9",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ADOdb/ADOdb.git",
-                "reference": "f601748cca1ccb86dfd427620a1692a70e681075"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ADOdb/ADOdb/zipball/f601748cca1ccb86dfd427620a1692a70e681075",
-                "reference": "f601748cca1ccb86dfd427620a1692a70e681075",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "adodb.inc.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause",
-                "LGPL-2.1"
-            ],
-            "authors": [
-                {
-                    "name": "John Lim",
-                    "email": "jlim@natsoft.com",
-                    "role": "Author"
-                },
-                {
-                    "name": "Damien Regad",
-                    "role": "Current maintainer"
-                },
-                {
-                    "name": "Mark Newnham",
-                    "role": "Developer"
-                }
-            ],
-            "description": "ADOdb is a PHP database abstraction layer library",
-            "homepage": "http://adodb.org/",
-            "keywords": [
-                "abstraction",
-                "database",
-                "layer",
-                "library",
-                "php"
-            ],
-            "time": "2016-12-21T17:19:42+00:00"
-        },
-        {
-            "name": "google/apiclient",
-            "version": "1.0.6-beta",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/google/google-api-php-client.git",
-                "reference": "a41a9dc0662e36420030eaab802dbb1f85459479"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/google/google-api-php-client/zipball/a41a9dc0662e36420030eaab802dbb1f85459479",
-                "reference": "a41a9dc0662e36420030eaab802dbb1f85459479",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "3.7.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "include-path": [
-                "src/"
-            ],
-            "license": [
-                "Apache-2.0"
-            ],
-            "description": "Client library for Google APIs",
-            "homepage": "http://developers.google.com/api-client-library/php",
-            "keywords": [
-                "google"
-            ],
-            "time": "2014-09-30T19:33:59+00:00"
-        },
         {
             "name": "jdorn/file-system-cache",
             "version": "dev-master",
@@ -297,12 +198,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPOffice/PHPExcel.git",
-                "reference": "185bf412339526c97a98d959c3c0ecf4b7c80016"
+                "reference": "c269793ee715fb5a15f0b2ad25c064d9ee6e8e53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPOffice/PHPExcel/zipball/185bf412339526c97a98d959c3c0ecf4b7c80016",
-                "reference": "185bf412339526c97a98d959c3c0ecf4b7c80016",
+                "url": "https://api.github.com/repos/PHPOffice/PHPExcel/zipball/c269793ee715fb5a15f0b2ad25c064d9ee6e8e53",
+                "reference": "c269793ee715fb5a15f0b2ad25c064d9ee6e8e53",
                 "shasum": ""
             },
             "require": {
@@ -351,7 +252,7 @@
                 "xls",
                 "xlsx"
             ],
-            "time": "2017-03-02T00:38:00+00:00"
+            "time": "2017-12-25T02:39:38+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -359,12 +260,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "c1265670eec0664247d149072593ae309e8bf73e"
+                "reference": "73e460c1466a867e734cf2c57d82de7e519e4533"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/c1265670eec0664247d149072593ae309e8bf73e",
-                "reference": "c1265670eec0664247d149072593ae309e8bf73e",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/73e460c1466a867e734cf2c57d82de7e519e4533",
+                "reference": "73e460c1466a867e734cf2c57d82de7e519e4533",
                 "shasum": ""
             },
             "require": {
@@ -405,7 +306,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2017-11-23T14:49:16+00:00"
+            "time": "2017-12-31T05:43:17+00:00"
         },
         {
             "name": "twig/twig",
@@ -474,16 +375,16 @@
         },
         {
             "name": "yajra/laravel-pdo-via-oci8",
-            "version": "v1.3.5",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yajra/pdo-via-oci8.git",
-                "reference": "27374cc5ba4d11c0dda08621a9039f107f00fe36"
+                "reference": "b3a86f9f5ecb5b05e497bbbfef13e33ae201a417"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/pdo-via-oci8/zipball/27374cc5ba4d11c0dda08621a9039f107f00fe36",
-                "reference": "27374cc5ba4d11c0dda08621a9039f107f00fe36",
+                "url": "https://api.github.com/repos/yajra/pdo-via-oci8/zipball/b3a86f9f5ecb5b05e497bbbfef13e33ae201a417",
+                "reference": "b3a86f9f5ecb5b05e497bbbfef13e33ae201a417",
                 "shasum": ""
             },
             "require-dev": {
@@ -506,16 +407,17 @@
                 }
             ],
             "description": "PDO userspace driver proxying calls to PHP OCI8 driver",
-            "time": "2017-11-28T05:06:03+00:00"
+            "time": "2018-01-04T07:20:53+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "lespoilus/spyc": 20,
         "jdorn/sql-formatter": 20,
         "jdorn/file-system-cache": 20,
-        "lespoilus/spyc": 20
+        "yajra/laravel-pdo-via-oci8": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
