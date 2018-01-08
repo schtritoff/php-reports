@@ -132,7 +132,12 @@ class PdoReportType extends ReportTypeBase {
 
 		$options = array();
 
-		if(isset($params['all'])) $options[] = 'ALL';
+        if(isset($params['all'])) {
+            $options[] = array(
+                'value'=>'',
+                'display'=>$params['all']
+            );
+        }
 
 		while($row = $result->fetch(PDO::FETCH_ASSOC)) {
 			$options[] = array(
