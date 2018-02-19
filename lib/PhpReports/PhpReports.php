@@ -46,8 +46,7 @@ class PhpReports {
 		if(file_exists('templates/local')) array_unshift($template_dirs, 'templates/local');
 
 		$loader = new Twig_Loader_Chain(array(
-			new Twig_Loader_Filesystem($template_dirs),
-			new Twig_Loader_String()
+			new Twig_Loader_Filesystem($template_dirs)
 		));
 		self::$twig = new Twig_Environment($loader);
 		self::$twig->addFunction(new Twig_SimpleFunction('dbdate', 'PhpReports::dbdate'));
@@ -62,9 +61,9 @@ class PhpReports {
 		self::$twig->addGlobal('theme', $theme);
 		self::$twig->addGlobal('path', $path);
 
-		self::$twig->addFilter('var_dump', new Twig_Filter_Function('var_dump'));
+		self::$twig->addFilter(new Twig_SimpleFilter('var_dump', function ($mixed) { var_dump($mixed); }));
 
-		self::$twig_string = new Twig_Environment(new Twig_Loader_String(), array('autoescape'=>false));
+		self::$twig_string = new Twig_Environment($loader, array('autoescape'=>false));
 		self::$twig_string->addFunction(new Twig_SimpleFunction('sqlin', 'PhpReports::generateSqlIN'));
 
 		FileSystemCache::$cacheDir = self::$config['cacheDir'];
@@ -166,12 +165,20 @@ class PhpReports {
 		$macros = array_merge($default,$macros);
 
 		//if a template path like 'html/report' is given, add the twig file extension
-		if(preg_match('/^[a-zA-Z_\-0-9\/]+$/',$template)) $template .= '.twig';
-		return self::$twig->render($template,$macros);
+		if (preg_match('/^[a-zA-Z_\-0-9\/]+$/',$template)) {
+			$template .= '.twig';
+			return self::$twig->render($template,$macros);
+		} else {
+			// string template for twig2 compatibility, src: https://stackoverflow.com/a/31082808/1155121
+			$template = self::$twig->createTemplate($template);
+			return $template->render($macros);
+		}
+		
 	}
 
 	public static function renderString($template, $macros) {
-			return self::$twig_string->render($template,$macros);
+			$template = self::$twig_string->createTemplate($template);
+			return $template->render($macros);
 	}
 
 	public static function displayReport($report,$type) {
