@@ -49,6 +49,15 @@ class PhpReports {
 			new Twig_Loader_Filesystem($template_dirs)
 		));
 		self::$twig = new Twig_Environment($loader);
+
+		// configure date format displayed to user; php-to-js format from https://stackoverflow.com/a/16702565/1155121 
+		$twigDateFormat = preg_replace('/[^YyMmd\-\/\.]/', '', self::$config['twig_setDateFormat_format']); // pass only date part, ignore time
+		self::$twig->getExtension('Twig_Extension_Core')->setDateFormat($twigDateFormat);
+		$phpFormatOptions = array('y', 'Y', 'm', 'd');
+		$jsFormatOptions = array('yy', 'yyyy', 'mm', 'dd');
+		$jsFormat = str_replace($phpFormatOptions, $jsFormatOptions, $twigDateFormat);
+		self::$twig->addGlobal('js_dateformat', $jsFormat);
+		
 		self::$twig->addFunction(new Twig_SimpleFunction('dbdate', 'PhpReports::dbdate'));
 		self::$twig->addFunction(new Twig_SimpleFunction('sqlin', 'PhpReports::generateSqlIN'));
 
